@@ -34,9 +34,9 @@
                         <p>Sofia</p>
                     </div>
                     <div class="profile-icons">
-                        <i><i class="fa-solid fa-circle-notch"></i></i>
-                        <i><i class="fa-solid fa-message"></i></i>
-                        <i><i class="fa-solid fa-ellipsis-vertical"></i></i>
+                        <i class="fa-solid fa-circle-notch"></i>
+                        <i class="fa-solid fa-message"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
                     </div>
                 </header>
                 <section class="notifications">
@@ -49,7 +49,7 @@
                     </div>
                 </section>
                 <section class="search-contacts">
-                    <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                    <i class="fa-solid fa-magnifying-glass"></i>
                     <input class="search-bar" type="text" placeholder="Cerca o inizia una nuova chat">
                 </section>
                 <section class="list-contacts">
@@ -62,13 +62,40 @@
                                     <p>{{item.name}}</p>
                                     <p>Ultimo messagio inviato</p>
                                 </div>
+                                <div class="end">
+                                    <p>12:00</p>
+                                </div>
                             </div>
                         </li>
                     </ul>
                 </section>
 
             </aside>
-            <main></main>
+            <main>
+                <header class="profile-chat">
+                    <div class="profile-chat-info">
+                        <img src="./img/avatar_1.jpg" alt="my profile pic">
+                        <div class="info">
+                            <p>Michele</p>
+                            <p>Ultimo accesso oggi alle 12:00</p>
+                        </div>
+                    </div>
+
+                    <div class="profile-icons">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-paperclip"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </header>
+                <section class="chat">
+
+                </section>
+                <section class="write">
+                    <i class="fa-regular fa-face-smile"></i>
+                    <input class="message-bar" type="text" placeholder="Scrivi un messaggio">
+                    <i class="fa-solid fa-microphone"></i>
+                </section>
+            </main>
         </section>
     </div>
 

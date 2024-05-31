@@ -29,13 +29,14 @@ aside {
 main {
     height: 900px;
     width: 900px;
-    background-color: yellow;
+
 }
 
 .my-profile {
     background-color: rgb(234, 234, 234);
     padding: 0.5rem;
     display: flex;
+    border-right: 1px solid rgb(227, 227, 227);
 }
 
 .profile {
@@ -95,13 +96,19 @@ main {
 }
 
 .search-contacts {
-    padding: 1rem;
+    padding: 0.5rem;
     background-color: rgb(234, 234, 234);
+    text-align: center;
 }
 
 .search-bar {
     width: 90%;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 10px;
 }
+
+
 
 .list-contacts {
     padding: 1rem;
@@ -132,4 +139,57 @@ main {
 
 .info>p:last-child {
     font-size: 12px;
+}
+
+.profile-chat {
+    background-color: rgb(234, 234, 234);
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    border-left: 1px solid rgb(227, 227, 227);
+}
+
+.profile-chat-info {
+    display: flex;
+    max-width: 900px;
+    align-items: center;
+}
+
+.profile-chat-info>img {
+    width: 45px;
+    border-radius: 50%;
+}
+
+.chat {
+    background-image: url(../img/mine.jpg);
+    height: calc(900px - 131px);
+    padding: 5rem;
+
+}
+
+div>.my-message {
+    text-align: end;
+}
+
+
+.write {
+    background-color: rgb(243, 238, 234);
+    height: calc(900px - 830px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+}
+
+.message-bar {
+    padding: 1rem;
+    width: 80%;
+    border: none;
+    border-radius: 10px;
+}
+
+.fa-face-smile,
+.fa-microphone {
+    font-size: 25px;
+    color: rgb(107, 115, 118);
 }
