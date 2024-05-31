@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Lato", sans-serif;
+}
+
+
+
+body {
+    background: linear-gradient(to bottom, #029588 150px, #DCDBD2 100px);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container {
+    display: flex;
+}
+
+aside {
+    height: 900px;
+    width: 400px;
+    background-color: red;
+}
+
+main {
+    height: 900px;
+    width: 1000px;
+    background-color: yellow;
+}
+
+.my-profile {
+    background-color: rgb(234, 234, 234);
+    padding: 0.5rem;
+    display: flex;
+}
+
+.profile {
+    display: flex;
+    max-width: 400px;
+    align-items: center;
+}
+
+.profile>img {
+    width: 15%;
+    border-radius: 50%;
+}
+
+.profile-icons {
+    display: flex;
+    align-items: center;
+}
+
+.profile-icons>i {
+    padding: 0 7px;
+    color: rgb(177, 177, 177);
+}
