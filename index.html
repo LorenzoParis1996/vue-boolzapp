@@ -11,6 +11,7 @@
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -29,8 +30,8 @@
             <aside>
                 <header class="my-profile">
                     <div class="profile">
-                        <img src="./img/avatar_7.jpg" alt="my profile pic">
-                        <p>Lorenzo</p>
+                        <img src="./img/avatar_io.jpg" alt="my profile pic">
+                        <p>Sofia</p>
                     </div>
                     <div class="profile-icons">
                         <i><i class="fa-solid fa-circle-notch"></i></i>
@@ -38,6 +39,34 @@
                         <i><i class="fa-solid fa-ellipsis-vertical"></i></i>
                     </div>
                 </header>
+                <section class="notifications">
+                    <div class="bell-bg">
+                        <i class="fa-solid fa-bell-slash bell"></i>
+                    </div>
+                    <div class="receive">
+                        <p>Ricevi notifiche di nuovi messaggi</p>
+                        <p class="underline">Attiva notifiche desktop</p>
+                    </div>
+                </section>
+                <section class="search-contacts">
+                    <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                    <input class="search-bar" type="text" placeholder="Cerca o inizia una nuova chat">
+                </section>
+                <section class="list-contacts">
+                    <ul>
+                        <li v-for="(item, index) in contacts" :key="index">
+                            <div class="contact-container">
+                                <div class="img-container"><img :src="`${item.avatar}.jpg`" alt="">
+                                </div>
+                                <div class="info">
+                                    <p>{{item.name}}</p>
+                                    <p>Ultimo messagio inviato</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
             </aside>
             <main></main>
         </section>
