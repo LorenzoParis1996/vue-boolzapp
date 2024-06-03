@@ -196,9 +196,10 @@ main {
     align-self: flex-end;
     border-radius: 10px;
     font-size: 13px;
+    margin-bottom: 0.3rem;
 }
 
-.message-receieved {
+.message-received {
     background-color: rgb(255, 255, 255);
     width: 200px;
     padding: 1rem;
