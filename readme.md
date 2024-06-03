@@ -12,6 +12,7 @@ Milestone 2
 Visualizzazione dinamica dei messaggi: tramite la direttiva v-for, visualizzare tutti i messaggi relativi al contatto attivo all’interno del pannello della conversazione
 Click sul contatto mostra la conversazione del contatto cliccato
 
+- mi creo delle funzioni in cui gli indici si interfacciano e posso navigare col click nella lista contatti, e col ciclo v-for, quando clicco su un contatto, mi stampa i messaggi della chat del contatto cliccato
 
 Milestone 3
 Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando “enter” il testo viene aggiunto al thread sopra, come messaggio verde
