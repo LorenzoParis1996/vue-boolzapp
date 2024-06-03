@@ -56,9 +56,9 @@
                 </section>
                 <section class="list-contacts">
                     <ul>
-                        <li v-for="(item, index) in contacts" :key="index">
+                        <li v-for="(item, index) in contacts" :key="index" @click="seeChat(index)">
                             <div class="contact-container">
-                                <div class="img-container"><img :src="`${item.avatar}.jpg`" alt="">
+                                <div class="img-container"><img :src="item.avatar" alt="">
                                 </div>
                                 <div class="info">
                                     <p>{{item.name}}</p>
@@ -76,9 +76,9 @@
             <main>
                 <header class="profile-chat">
                     <div class="profile-chat-info">
-                        <img src="./img/avatar_1.jpg" alt="my profile pic">
+                        <img :src="contacts[openedChat()].avatar" alt="profile pic">
                         <div class="info">
-                            <p>Michele</p>
+                            <p>{{contacts[openedChat()].name}}</p>
                             <p>Ultimo accesso oggi alle 12:00</p>
                         </div>
                     </div>
