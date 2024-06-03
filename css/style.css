@@ -5,7 +5,9 @@
     font-family: "Lato", sans-serif;
 }
 
-
+.light-grey {
+    color: lightgray;
+}
 
 body {
     background: linear-gradient(to bottom, #029588 150px, #DCDBD2 100px);
@@ -101,17 +103,28 @@ main {
     text-align: center;
 }
 
+.search-container {
+    background-color: white;
+    border-radius: 5px;
+    color: rgb(187, 198, 212);
+}
+
+.search-container>i {
+    vertical-align: middle;
+    padding: 0 0.5rem;
+    border-right: 1px solid lightgray;
+}
+
 .search-bar {
     width: 90%;
     padding: 0.5rem;
     border: none;
-    border-radius: 10px;
 }
 
 
-
 .list-contacts {
-    padding: 1rem;
+    padding: 1rem 0;
+    overflow-y: scroll;
 }
 
 .list-contacts>ul {
@@ -120,7 +133,7 @@ main {
 
 .contact-container {
     display: flex;
-    padding: 0.7em 0;
+    padding: 0.7em 0.5rem;
     border-top: 1px solid lightgray;
 }
 
@@ -139,6 +152,11 @@ main {
 
 .info>p:last-child {
     font-size: 12px;
+}
+
+.end {
+    font-size: 10px;
+    margin-left: 9rem;
 }
 
 .profile-chat {
@@ -163,8 +181,29 @@ main {
 .chat {
     background-image: url(../img/mine.jpg);
     height: calc(900px - 131px);
-    padding: 5rem;
+    padding: 7rem;
+    overflow-y: scroll;
+}
 
+.messages {
+    display: flex;
+    flex-direction: column;
+}
+
+.message-sent {
+    background-color: rgb(213, 249, 186);
+    width: 200px;
+    padding: 1rem;
+    align-self: flex-end;
+    border-radius: 10px;
+}
+
+.message-receieved {
+    background-color: rgb(255, 255, 255);
+    width: 200px;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 10px;
 }
 
 div>.my-message {
