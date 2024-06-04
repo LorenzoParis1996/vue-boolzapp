@@ -1,5 +1,6 @@
 const { createApp } = Vue;
 
+const { DateTime } = luxon;
 
 createApp({
     data() {
@@ -170,7 +171,8 @@ createApp({
 
             index: 0,
             newMessage: '',
-            /*newDate: luxon.DateTime.now().toFormat('HH:mm')*/
+            listContactInput: '',
+            newDate: luxon.DateTime.now().toFormat('HH:mm')
 
         }
     },
@@ -188,7 +190,7 @@ createApp({
 
         writeMessage() {
             this.contacts[this.index].messages.push({
-                date: '10/01/2020 15:30:55',
+                date: this.newDate,
                 message: this.newMessage,
                 status: 'sent'
             });
@@ -204,6 +206,15 @@ createApp({
             }, 1000);
         },
 
+        searchContact() {
+            if (this.listContactInput) {
+                return this.contacts.filter((contact) => {
+                    return contact.name.toLowerCase().includes(this.listContactInput.toLowerCase())
+                });
+            } else {
+                return this.contacts;
+            }
+        }
 
 
     }

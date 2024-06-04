@@ -18,9 +18,9 @@
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
 
-    <!--<script src="
+    <script src="
         https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js
-        "></script>-->
+        "></script>
 
     <title>boolzapp</title>
 </head>
@@ -55,17 +55,19 @@
                 <section class="search-contacts">
                     <div class="search-container">
                         <i class="fa-solid fa-magnifying-glass"></i>
-                        <input class="search-bar" type="text" placeholder="Cerca o inizia una nuova chat">
+                        <input class="search-bar" type="text" placeholder="Cerca o inizia una nuova chat"
+                            v-model="listContactInput">
                     </div>
                 </section>
                 <section class="list-contacts">
                     <ul>
-                        <li tabindex="0" v-for="(item, index) in contacts" :key="index" @click="seeChat(index)">
+                        <li tabindex="0" v-for="(contact, index) in  searchContact()" :key="index"
+                            @click="seeChat(index)">
                             <div class="contact-container">
-                                <div class="img-container"><img :src="item.avatar" alt="">
+                                <div class="img-container"><img :src="contact.avatar" alt="">
                                 </div>
                                 <div class="info">
-                                    <p>{{item.name}}</p>
+                                    <p>{{contact.name}}</p>
                                     <p class="light-grey">Ultimo messagio inviato</p>
                                 </div>
                                 <div class="end">
