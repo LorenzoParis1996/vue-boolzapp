@@ -18,6 +18,10 @@
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
 
+    <!--<script src="
+        https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js
+        "></script>-->
+
     <title>boolzapp</title>
 </head>
 
@@ -56,7 +60,7 @@
                 </section>
                 <section class="list-contacts">
                     <ul>
-                        <li v-for="(item, index) in contacts" :key="index" @click="seeChat(index)">
+                        <li tabindex="0" v-for="(item, index) in contacts" :key="index" @click="seeChat(index)">
                             <div class="contact-container">
                                 <div class="img-container"><img :src="item.avatar" alt="">
                                 </div>
@@ -94,6 +98,7 @@
                         <div v-for="(item, index) in contacts[openedChat()].messages"
                             :class="(item.status == 'sent') ? 'message-sent' : 'message-received'">
                             <p>{{item.message}}</p>
+                            <p>{{item.date}}</p>
                         </div>
 
                     </article>

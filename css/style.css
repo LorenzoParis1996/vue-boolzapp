@@ -9,6 +9,7 @@
     color: lightgray;
 }
 
+
 body {
     background: linear-gradient(to bottom, #029588 150px, #DCDBD2 100px);
     height: 100vh;
@@ -130,6 +131,14 @@ main {
     list-style: none;
 }
 
+li:hover {
+    background-color: gray;
+}
+
+li:focus {
+    background-color: gray;
+}
+
 .contact-container {
     display: flex;
     padding: 0.7em 0.5rem;
@@ -206,6 +215,11 @@ main {
     margin-top: 1rem;
     border-radius: 10px;
     font-size: 13px;
+}
+
+.messages>div>p:last-of-type {
+    text-align: end;
+    font-size: 10px;
 }
 
 div>.my-message {

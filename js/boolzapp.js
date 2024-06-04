@@ -1,5 +1,6 @@
 const { createApp } = Vue;
 
+
 createApp({
     data() {
         return {
@@ -168,7 +169,8 @@ createApp({
             ],
 
             index: 0,
-            newMessage: ''
+            newMessage: '',
+            /*newDate: luxon.DateTime.now().toFormat('HH:mm')*/
 
         }
     },
@@ -186,14 +188,25 @@ createApp({
 
         writeMessage() {
             this.contacts[this.index].messages.push({
-                date: '',
+                date: '10/01/2020 15:30:55',
                 message: this.newMessage,
                 status: 'sent'
             });
 
             this.newMessage = '';
-        }
+
+            setTimeout(() => {
+                this.contacts[this.index].messages.push({
+                    date: this.newDate,
+                    message: 'ok!',
+                    status: 'received',
+                });
+            }, 1000);
+        },
+
+
 
     }
 
 }).mount('#app');
+
