@@ -168,6 +168,7 @@ createApp({
             ],
 
             index: 0,
+            newMessage: ''
 
         }
     },
@@ -181,6 +182,16 @@ createApp({
         openedChat() {
             let index = this.seeChat(this.index);
             return index
+        },
+
+        writeMessage() {
+            this.contacts[this.index].messages.push({
+                date: '',
+                message: this.newMessage,
+                status: 'sent'
+            });
+
+            this.newMessage = '';
         }
 
     }
